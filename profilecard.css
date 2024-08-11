@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    background-image: url(./3112096.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+}
+.content{
+    width: 250px;
+    height: 450px;
+    border: 1px solid white;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 0px 10px 5px blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(blueviolet,violet,rgb(88, 2, 88));
+    transition: all .4s ease;/
+}
+.pic{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border: 10px solid rgb(146, 0, 146);
+    background-image: url(./profile_9706583.png);
+    background-color: aqua;
+    background-size: cover;
+    border-radius: 50%;
+    top: 0px;
+    transition: all .4s linear;
+    z-index: -2;
+}
+.social-media{
+    display: flex;
+    position: absolute;
+    transform: translateY(100px);
+    font-size: x-large;
+    flex-direction: row;
+    justify-content: space-between;
+    opacity: 0;
+}
+.social-media i{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: 0.3s;
+}
+.content:hover .pic{
+    top: -220px;
+    border-color: rgb(255, 3, 192);
+}
+.content:hover{
+    background: transparent;
+    transition: all 0.4s;
+}
+.content:hover .social-media{
+    opacity: 1;
+    animation: social .3s linear 0s;
+}
+@keyframes social{
+    0%{
+        transform: translateY(300px);
+    }
+    100%{
+        transform: translateY(115px);
+    }
+    
+}
+.social-media i:hover{
+    color: black;
+    text-shadow: 0px 0px 10px rgb(43, 255, 0), 0px 0px 10px rgb(43, 255, 0) ;
+}
+p{
+    font-family: Arial;
+    position: absolute;
+    text-align: center;
+    margin: 10px;
+    font-weight: 1000;
+    transform: translateY(0px);
+    opacity: 0;
+    color: rgb(108, 184, 197);
+}
+.content:hover p{
+    opacity: 1;
+    transform: translateY(0px);
+    animation: p .4s linear 0s ;
+}
+@keyframes p {
+    0%{
+        transform: translateY(300px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+h1{
+    position: absolute;
+    margin: 10px;
+    font-size: 27px;
+    font-family:fantasy;
+    color: rgb(0, 238, 178);
+    opacity: 0;
+    transform: translateY(-60px);
+}
+.content:hover h1{
+    opacity: 1;
+    transform: translateY(-70px);
+    animation: h1 .5s linear 0s ;
+}
+@keyframes h1{
+    0%{
+        transform: translateY(350px);
+    }
+    100%{
+        transform: translateY(-60px);
+    }
+}
+button{
+    position: absolute;
+    bottom: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(76, 5, 141);
+    outline: none;
+    transition: 0.2s;
+    border: none;
+    opacity: 0;
+}
+button:hover{
+    box-shadow: 0px 0px 10px blueviolet;
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua,0px 0px 10px aqua;
+    color: black;
+}
+.content:hover button{
+    opacity: 1;
+    transform: translateY(0px);
+    animation: butto .4s linear 0s ;
+}
+@keyframes butto {
+    0%{
+        transform: translateY(150px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.social-media a{
+    text-decoration: none;
+    color: rgb(0, 245, 12);
+}
